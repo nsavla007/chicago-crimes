@@ -1,0 +1,26 @@
+CREATE EXTERNAL TABLE `crimes_staging`(
+`id` int, 
+`case number` string, 
+`date` string, 
+`block` string, 
+`iucr` string, 
+`primary type` string, 
+`description` string, 
+`location description` string, 
+`arrest` boolean, 
+`domestic` boolean, 
+`beat` int, 
+`district` int, 
+`ward` int, 
+`community area` int, 
+`fbi code` string, 
+`x coordinate` int, 
+`y coordinate` int, 
+`year` int, 
+`updated on` string, 
+`latitude` double, 
+`longitude` double, 
+`location` string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/tmp/crimesdata/';
